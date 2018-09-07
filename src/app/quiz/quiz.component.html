@@ -1,0 +1,12 @@
+<input type="text" class="form-control" placeholder="Enter your question" (input)="question=$event.target.value"/>
+<input type="text" class="form-control" placeholder="Enter your name" (input)="name=$event.target.value"/>
+<button class="btn btn-primary" (click)="createQuestion()">Create</button>
+
+
+
+
+<app-quizlist [quizlist]='data' (FullName)='getFullName($event)'></app-quizlist>
+<div *ngIf='display; else testTemplate'>Got into If
+
+</div>
+<ng-template #testTemplate>Got into else</ng-template>
